@@ -11,11 +11,11 @@
 $('#tab-contents .tab[id != "tab1"]').hide();
 
 // id="tab-menu"のaタグがクリックされたときに、処理を実行
-$('#tab-menu a').on('click',function(event) {
+$('#tab-menu a').on('click', function(event) {
   // イベント発生時に行われる処理
   $("#tab-contents .tab").hide();
   // クラス属性が設定されているHTML要素から、クラスを削除するメソッド
-  $("#tab-menu /active").removeClass("active");
+  $("#tab-menu .active").removeClass("active");
   // .addClass()は任意のHTML要素にクラス属性を追加できるメソッド
   $(this).addClass("active");
   // .show()は要素を表示するメソッド、$(this)のとき＝タブがクリックされたときに表示
